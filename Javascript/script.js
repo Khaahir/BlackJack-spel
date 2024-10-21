@@ -30,7 +30,9 @@ function builddeck() {
 builddeck();
 
 //Slumpa fram ett kort som visas i #card html (#cards är display: none)
-
+for(let i = 0; i <= cards.length; i++){
+    const randomCard = Math.floor(Math.random(cards[i]))
+}
 //Hämta knappen #again
 
 //Med slump functionen få den att generera ett kort vid click
