@@ -1,0 +1,4 @@
+Målet är att nå 21 poäng eller så nära 21 som möjligt utan att gå över (bust).
+Spelaren spelar mot dealern (datorn).
+Dealern måste dra kort tills de når minst 17 poäng.
+Om spelaren överstiger 21 poäng förlorar de automatiskt. 

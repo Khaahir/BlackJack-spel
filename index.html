@@ -7,14 +7,29 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-
     <h1>BLACK JACK</h1>
+    <!-- här ska alla kort bilder in för dealer i dealer-cards -->
+    <h2 id="dealer-sum">Dealer:</h2>
+    <section id="dealer-cards">
+      <img
+        class="hidden-card"
+        src="Cards/back_dark.png"
+        alt="back of the card"
+      />
+      <img src="Cards/clubs_10.png" alt="culubs 10" />
+    </section>
 
-    <section id="card"><img id="cards" src="./Cards/" alt="card"></section>
+    <!-- här ska alla kort bilder  in för spelaren i your-cards  -->
+    <h2 id="your-sum">You:</h2>
+    <section id="your-cards">
+      <img src="Cards/back_dark.png" alt="back of the card" />
+    </section>
 
-    <button id="again">AGAIN</button>
+    <button class="btn-again">AGAIN</button>
 
-    <button id="stop"> STOP</button>
+    <button class="btn-stop">STOP</button>
+
+    <p id="results">Result:</p>
 
     <script src="Javascript/script.js"></script>
   </body>
