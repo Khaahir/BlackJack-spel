@@ -1,6 +1,9 @@
 //kortleken
 // nu ska den bara blandas...
+let deck = [];
+
 function builddeck() {
+  let type = ["C", "S", "H", "D"];
   let value = [
     "A",
     "2",
@@ -16,18 +19,13 @@ function builddeck() {
     "Q",
     "K",
   ];
-  let type = ["C", "S", "H", "D"];
-  let deck = [];
 
   for (let i = 0; i < type.length; i++) {
     for (let j = 0; j < value.length; j++) {
       deck.push(value[j] + "-" + type[i]);
     }
   }
-  console.log(deck);
 }
-
-builddeck();
 
 //Slumpa fram ett kort som visas i #card html (#cards är display: none)
 
