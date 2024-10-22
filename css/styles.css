@@ -36,10 +36,10 @@ button {
   width: 8rem;
   height: 2rem;
 }
-.btn-again {
+#btn-again {
   background-color: chartreuse;
 }
-.btn-stop {
+#btn-stop {
   background-color: crimson;
   color: antiquewhite;
 }
