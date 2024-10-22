@@ -1,4 +1,15 @@
 //kortleken
+let dealerSum = 0;
+let yourSum = 0;
+
+let dealerAceCount = 0;
+let yourAceCount = 0;
+
+let hidden;
+let deck;
+
+let canHit = true;
+
 window.onload = function(){
     builddeck();
     shuffleDeck();
@@ -6,7 +17,7 @@ window.onload = function(){
     }
 // nu ska den bara blandas...
 function builddeck() {
-  let value = [
+  let values = [
     "A",
     "2",
     "3",
@@ -21,12 +32,12 @@ function builddeck() {
     "Q",
     "K",
   ];
-  let type = ["C", "S", "H", "D"];
+  let types = ["C", "S", "H", "D"];
   let deck = [];
 
-  for (let i = 0; i < type.length; i++) {
-    for (let j = 0; j < value.length; j++) {
-      deck.push(value[j] + "-" + type[i]);
+  for (let i = 0; i < types.length; i++) {
+    for (let j = 0; j < values.length; j++) {
+      deck.push(values[j] + "-" + types[i]);
     }
   }
   console.log(deck);
@@ -35,6 +46,12 @@ function builddeck() {
 
 //Slumpa fram ett kort som visas i #card html (#cards är display: none)
 function shuffleDeck(){
+    for (let i = 0; i < deck.length; i++){
+        let j = Math.floor(Math.random() * deck.length);
+        let temp = deck[i];
+        deck[i] = deck[j];
+        deck[j] = temp;
+    }
 }
 //Hämta knappen #again
 
