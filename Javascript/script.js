@@ -2,7 +2,7 @@
 // nu ska den bara blandas...
 let deck = [];
 
-function builddeck() {
+function buildDeck() {
   let type = ["C", "S", "H", "D"];
   let value = [
     "A",
@@ -25,12 +25,24 @@ function builddeck() {
       deck.push(value[j] + "-" + type[i]);
     }
   }
+  console.log(deck);
 }
 
-//Slumpa fram ett kort som visas i #card html (#cards är display: none)
-for(let i = 0; i <= cards.length; i++){
-    const randomCard = Math.floor(Math.random(cards[i]))
+function shuffleDeck() {
+  for (let i = -deck.length; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
 }
+
+buildDeck();
+
+//Slumpa fram ett kort som visas i #card html (#cards är display: none)
+
+for (let i = 0; i <= deck.length; i++) {
+  const randomCard = Math.floor(Math.random(deck[i]));
+}
+
 //Hämta knappen #again
 
 //Med slump functionen få den att generera ett kort vid click
